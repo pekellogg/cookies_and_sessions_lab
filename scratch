@@ -1,0 +1,34 @@
+scratch
+-------
+product #=> shopping site
+
+desired features
+----------------
+root
+contains input box within a form
+user types desired item & can click "add to cart" #=> item added to their cart
+displays all user's cart items
+
+Instructions
+------------
+MODELS
+- - - -
+no for models/tables for items re: DB storage
+instead, use cookies via Rails#session with cart helper method for cart item persistence and display within views
+
+CONTROLLERS
+- - - - - -
+ApplicationController#cart
+return cart items array utilizing rails session
+
+ProductsController
+2 app routes:
+1. Products#index (root route)
+2. Products#add POST products (add to cart)
+
+VIEWS (created per "feature tests" specs)
+- - - 
+MVP
+text box where user enters product name
+submit button adds product to their cart
+display cart items

@@ -1,0 +1,17 @@
+<h3>Search for Product by Name</h3>
+<%= form_tag(products_path, action: "add") do %>
+
+  <label>Product name:</label><br>
+  <%= text_field_tag(:product) %><br><br>
+
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+<br><br>
+
+<% if cart_contains_products?(cart) %>
+    <h4>Current cart:</h4>
+        <%= cart.each do |product| %>
+            <%= product %><br>
+        <% end %>
+<% end %>
